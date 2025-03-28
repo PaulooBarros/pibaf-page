@@ -3,7 +3,7 @@ import './style.css';
 
 const LocationSection: React.FC = () => {
   return (
-    <section id="location" className="section">
+    <section id="location" className="location-section">
       <div className="container">
         <h2 className="section-title">Nossa Localização</h2>
         

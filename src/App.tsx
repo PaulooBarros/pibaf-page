@@ -8,6 +8,7 @@ import PastorsSection from './components/PastorsSection/PastorsSection';
 import LocationSection from './components/LocationSection/LocationSection';
 import Footer from './components/Footer/Footer';
 import LoveYourChurchSection from './components/LoveYourChurchSection/LoveYourChurchSection'
+import HelpTheWorkSection from './components/HelpTheWorkSection/HelpTheWorkSection';
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
         <WorshipTimes />
         <PastorsSection />
         <LoveYourChurchSection/> {/* Substituído aqui */}
+        <HelpTheWorkSection/>
         <LocationSection />
       </main>
       <Footer />

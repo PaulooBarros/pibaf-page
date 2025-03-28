@@ -4,7 +4,7 @@ import "./style.css"
 
 const Header: React.FC = () => {
   return (
-    <header className="header">
+    <header className="header-section">
       <Navbar />
     </header>
   );

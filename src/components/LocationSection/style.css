@@ -8,6 +8,11 @@
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
+
+  .location-section {
+    background-color: var(--location-bg-color);
+    color: var(--location-text-color);
+  }
   
   .google-map {
     width: 100%;

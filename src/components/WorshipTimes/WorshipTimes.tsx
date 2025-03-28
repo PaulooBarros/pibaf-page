@@ -3,7 +3,7 @@ import './style.css';
 
 const WorshipTimes: React.FC = () => {
   return (
-    <section id="worship" className="section bg-light">
+    <section id="worship" className="worship-section">
       <div className="container">
         <div className="worship-header">
           <h2 className="worship-title">Horário</h2>

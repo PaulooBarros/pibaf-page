@@ -18,8 +18,10 @@ const Navbar: React.FC = () => {
           <Link to="pastors" smooth={true} duration={500} onClick={() => setIsOpen(false)}>Pastores</Link>
           {/* <Link to="ministries" smooth={true} duration={500} onClick={() => setIsOpen(false)}>Ministérios</Link> */}
           <Link to="location" smooth={true} duration={500} onClick={() => setIsOpen(false)}>Localização</Link>
+          <Link to="help" smooth={true} duration={500} onClick={() => setIsOpen(false)} className="donate-link">
+            Ajude esta Obra
+          </Link>
         </div>
-        
         <div className="navbar-toggle" onClick={() => setIsOpen(!isOpen)}>
           <span></span>
           <span></span>

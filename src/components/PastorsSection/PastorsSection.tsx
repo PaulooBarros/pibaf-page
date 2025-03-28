@@ -20,7 +20,7 @@ const PastorsSection: React.FC = () => {
     ];
   
     return (
-      <section id="pastors" className="section">
+      <section id="pastors" className="pastors-section">
         <div className="container">
           <h2 className="section-title">Nossos Pastores</h2>
           <div className="pastors-grid">

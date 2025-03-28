@@ -1,19 +1,44 @@
+/* Estilos específicos para a seção "Quem Somos" */
+.about-section {
+  background-color: var(--about-bg-color);
+  color: var(--about-text-color);
+  padding: var(--section-padding) 0;
+}
+
 .about-content {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: white;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.about-content p {
+  margin-bottom: 25px;
+}
+
+/* Quando quiser usar imagem de fundo no futuro */
+/*
+.about-section {
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+    url('sua-imagem-de-fundo.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--about-text-color);
+}
+*/
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .about-content {
+    padding: 0 20px;
+    font-size: 1rem;
   }
-  
-  .about-content p {
-    margin-bottom: 25px;
+}
+
+@media (min-width: 1921px) {
+  .about-content {
+    font-size: 1.2rem;
   }
-  
-  /* Telas Ultrawide */
-  @media (min-width: 2500px) {
-    .about-content {
-      font-size: 1.3rem;
-    }
-  }
+}

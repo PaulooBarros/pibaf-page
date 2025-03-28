@@ -3,15 +3,15 @@ import './style.css';
 
 const LoveYourChurchSection: React.FC = () => {
   return (
-    <section id="love-your-church" className="section bg-light">
+    <section id="love-your-church" className="love-your-church-section">
       <div className="container">
         <h2 className="section-title">Ame sua Igreja</h2>
-        <div className="bible-verse">
+        {/* <div className="bible-verse">
           <blockquote>
             "Ao Senhor, teu Deus, adorarás, e só a ele darás culto."
             <cite>Mateus 4:10</cite>
           </blockquote>
-        </div>
+        </div> */}
         <div className="love-content">
           <div className="love-card">
             <h3>Por que amar sua igreja?</h3>

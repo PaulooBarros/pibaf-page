@@ -3,6 +3,11 @@
     margin: 0 auto 60px;
     text-align: center;
   }
+
+  .love-your-church-section {
+    background-color: var(--help-bg-color);
+    color: var(--help-text-color);
+  }
   
   .bible-verse blockquote {
     font-size: 1.8rem;

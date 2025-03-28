@@ -4,6 +4,11 @@
     gap: 50px;
     margin-top: 60px;
   }
+
+  .pastors-section {
+    background-color: var(--pastors-bg-color);
+    color: var(--pastors-text-color);
+  }
   
   .pastor-card {
     text-align: center;

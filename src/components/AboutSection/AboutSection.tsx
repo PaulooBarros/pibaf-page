@@ -1,9 +1,9 @@
 import React from 'react';
-import "./style.css"
+import "./style.css"; // Mude para o CSS específico do componente
 
 const AboutSection: React.FC = () => {
   return (
-    <section id="about" className="section">
+    <section id="about" className="section about-section">
       <div className="container">
         <h2 className="section-title">Quem Somos</h2>
         <div className="about-content">
