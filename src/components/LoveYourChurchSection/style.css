@@ -1,0 +1,128 @@
+.bible-verse {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+  }
+  
+  .bible-verse blockquote {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    line-height: 1.4;
+    position: relative;
+    padding: 0 40px;
+  }
+  
+  .bible-verse blockquote::before,
+  .bible-verse blockquote::after {
+    content: '"';
+    font-size: 3rem;
+    color: var(--accent-color);
+    position: absolute;
+  }
+  
+  .bible-verse blockquote::before {
+    top: -20px;
+    left: 0;
+  }
+  
+  .bible-verse blockquote::after {
+    bottom: -40px;
+    right: 0;
+  }
+  
+  .bible-verse cite {
+    display: block;
+    margin-top: 20px;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+  }
+  
+  .love-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .love-card {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .love-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .love-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    position: relative;
+    padding-bottom: 15px;
+  }
+  
+  .love-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--accent-color);
+  }
+  
+  .love-card p, 
+  .love-card ul {
+    line-height: 1.8;
+    font-size: 1.1rem;
+  }
+  
+  .love-card ul {
+    padding-left: 20px;
+  }
+  
+  .love-card li {
+    margin-bottom: 10px;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .bible-verse blockquote {
+      font-size: 1.4rem;
+      padding: 0 30px;
+    }
+    
+    .love-content {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (min-width: 1921px) {
+    .bible-verse blockquote {
+      font-size: 2.2rem;
+    }
+    
+    .love-content {
+      max-width: 1200px;
+    }
+    
+    .love-card {
+      padding: 50px;
+    }
+    
+    .love-card h3 {
+      font-size: 1.8rem;
+    }
+    
+    .love-card p,
+    .love-card ul {
+      font-size: 1.2rem;
+    }
+  }

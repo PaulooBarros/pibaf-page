@@ -1,0 +1,64 @@
+.ministries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+  }
+  
+  .ministry-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .ministry-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ministry-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .ministry-card h3::before {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    background: var(--accent-color);
+  }
+  
+  .ministry-card p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+  }
+  
+  /* Telas Ultrawide */
+  @media (min-width: 1921px) {
+    .ministries-grid {
+      grid-template-columns: repeat(3, minmax(400px, 1fr));
+      max-width: 1400px;
+      margin: 80px auto 0;
+    }
+    
+    .ministry-card {
+      padding: 50px 40px;
+    }
+  }
+  
+  @media (min-width: 2500px) {
+    .ministries-grid {
+      grid-template-columns: repeat(4, minmax(400px, 1fr));
+    }
+    
+    .ministry-card p {
+      font-size: 1.3rem;
+    }
+  }

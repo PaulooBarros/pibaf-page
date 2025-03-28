@@ -1,0 +1,19 @@
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: white;
+  }
+  
+  .about-content p {
+    margin-bottom: 25px;
+  }
+  
+  /* Telas Ultrawide */
+  @media (min-width: 2500px) {
+    .about-content {
+      font-size: 1.3rem;
+    }
+  }
