@@ -2,17 +2,17 @@
     /* Cores base */
     --primary-color: #1a4b8c;
     --secondary-color: #0d2b4e;
-    --accent-color: #e3a805;
+    --accent-color: #e3b505;
     --light-color: #f8f9fa;
     --dark-color: #212529;
     
     /* Cores por seção */
     --hero-bg-color: #1a4b8c;
     --about-bg-color: #ffffff;
-    --worship-bg-color: #f8f9fa;
+    --worship-bg-color: #f0f1f3;
     --pastors-bg-color: #ffffff;
-    --location-bg-color: #f8f9fa;
-    --help-bg-color: #ffffff;
+    --location-bg-color: #f0f1f3;
+    --help-bg-color: #f0f1f3;
     --footer-bg-color: #212529;
     
     /* Textos por seção */

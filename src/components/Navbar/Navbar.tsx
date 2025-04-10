@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
             <img
               src={logo}// Substitua com o caminho da imagem
               alt="PIB Augusto Franco"
-              style={{ height: "280px" }} // Ajuste o tamanho conforme necessário
+              style={{ height: "250px" }} // Ajuste o tamanho conforme necessário
             />
           </Link>
         </div>
