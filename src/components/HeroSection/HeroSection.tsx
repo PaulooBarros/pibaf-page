@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
           
           <div className="bible-verse">
             <blockquote>
-              "Ao Senhor, teu Deus, adorarás, e só a ele darás culto."
+              Ao Senhor, teu Deus, adorarás, e só a ele darás culto.
               <cite>Mateus 4:10</cite>
             </blockquote>
           </div>

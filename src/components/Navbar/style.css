@@ -18,6 +18,15 @@
     display: none !important; /* Remove o sublinhado */
   }
   
+  a{
+    color: white;
+    cursor: pointer;
+  }
+
+  a:hover{
+    cursor: pointer; /* <-- Adicionado aqui */
+  }
+  
   /* Ajustes para mobile */
   @media (max-width: 768px) {
     .donate-link {

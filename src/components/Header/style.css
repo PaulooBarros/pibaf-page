@@ -39,6 +39,7 @@
     transition: all 0.3s ease;
     position: relative;
     padding: 5px 0;
+    cursor: pointer; /* <-- Adicionado aqui */
   }
   
   .navbar-links a::after {

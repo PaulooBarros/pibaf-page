@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-scroll';
-import "./style.css"
+import React, { useState } from "react";
+import { Link } from "react-scroll";
+import "./style.css";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -9,16 +9,62 @@ const Navbar: React.FC = () => {
     <nav className="navbar">
       <div className="container">
         <div className="navbar-brand">
-          <span>PIB Augusto Franco</span>
+          <Link
+            to="hero"
+            smooth={true}
+            duration={500}
+            onClick={() => setIsOpen(false)}
+            style={{
+              cursor: "pointer",
+              color: "white",
+              textDecoration: "none",
+            }}
+          >
+            PIB Augusto Franco
+          </Link>
         </div>
-        
-        <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
-          <Link to="about" smooth={true} duration={500} onClick={() => setIsOpen(false)}>Quem Somos</Link>
-          <Link to="worship" smooth={true} duration={500} onClick={() => setIsOpen(false)}>Horários</Link>
-          <Link to="pastors" smooth={true} duration={500} onClick={() => setIsOpen(false)}>Pastores</Link>
+
+        <div className={`navbar-links ${isOpen ? "active" : ""}`}>
+          <Link
+            to="about"
+            smooth={true}
+            duration={500}
+            onClick={() => setIsOpen(false)}
+          >
+            Quem Somos
+          </Link>
+          <Link
+            to="worship"
+            smooth={true}
+            duration={500}
+            onClick={() => setIsOpen(false)}
+          >
+            Horários
+          </Link>
+          <Link
+            to="pastors"
+            smooth={true}
+            duration={500}
+            onClick={() => setIsOpen(false)}
+          >
+            Pastores
+          </Link>
           {/* <Link to="ministries" smooth={true} duration={500} onClick={() => setIsOpen(false)}>Ministérios</Link> */}
-          <Link to="location" smooth={true} duration={500} onClick={() => setIsOpen(false)}>Localização</Link>
-          <Link to="help" smooth={true} duration={500} onClick={() => setIsOpen(false)} className="donate-link">
+          <Link
+            to="location"
+            smooth={true}
+            duration={500}
+            onClick={() => setIsOpen(false)}
+          >
+            Localização
+          </Link>
+          <Link
+            to="help"
+            smooth={true}
+            duration={500}
+            onClick={() => setIsOpen(false)}
+            className="donate-link"
+          >
             Ajude esta Obra
           </Link>
         </div>
