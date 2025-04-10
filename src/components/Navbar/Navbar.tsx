@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import "./style.css";
+import logo from "../../assets/logopibafpretoebranco.png";
+
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -20,7 +22,11 @@ const Navbar: React.FC = () => {
               textDecoration: "none",
             }}
           >
-            PIB Augusto Franco
+            <img
+              src={logo}// Substitua com o caminho da imagem
+              alt="PIB Augusto Franco"
+              style={{ height: "280px" }} // Ajuste o tamanho conforme necessário
+            />
           </Link>
         </div>
 
