@@ -10,8 +10,8 @@
   }
   
   .donate-link:hover {
-    background-color: #f1c40f;
     transform: scale(1.05);
+    color: white !important;
   }
   
   .donate-link::after {
@@ -31,7 +31,7 @@
   /* Efeito de pulsação para chamar atenção */
   @keyframes pulse {
     0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+    50% { transform: scale(1.010); }
     100% { transform: scale(1); }
   }
   

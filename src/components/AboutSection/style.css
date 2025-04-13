@@ -1,6 +1,6 @@
 /* Estilos específicos para a seção "Quem Somos" */
 .about-section {
-  background-color: var(--about-bg-color);
+  background-color: var(--worship-bg-color);
   color: var(--about-text-color);
   padding: var(--section-padding) 0;
 }

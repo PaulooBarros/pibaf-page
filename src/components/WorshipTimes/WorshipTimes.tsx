@@ -24,7 +24,6 @@ const WorshipTimes: React.FC = () => {
         </div>
         
         <div className="worship-footer">
-          <p>Endereço: R. José Alves Pereira, 79 - Farolândia, Aracaju - SE, 49030-460</p>
         </div>
       </div>
     </section>
