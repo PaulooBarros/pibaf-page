@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
                  className="social-link">
                 Instagram
               </a>
-              <a href="https://tr.ee/Ei7a2I-a0o" 
+              <a href="https://www.youtube.com/@PIBAF000000000000000000000000" 
                  target="_blank" 
                  rel="noopener noreferrer"
                  className="social-link">

@@ -15,3 +15,12 @@ export interface Pastor {
     title: string;
     times: string[];
   }
+
+ export interface Video {
+    id: {
+      videoId: string;
+    };
+    snippet: {
+      title: string;
+    };
+  }

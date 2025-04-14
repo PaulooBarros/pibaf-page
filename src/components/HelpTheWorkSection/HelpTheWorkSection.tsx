@@ -5,7 +5,7 @@ import './style.css';
 const HelpTheWorkSection: React.FC = () => {
   return (
     <section id="help" className="help-section">
-      <div className="container">
+      <div className="container-help-the-work">
         <h2 className="section-title">Ajude esta Obra</h2>
         
         <div className="help-content">

@@ -4,7 +4,7 @@ import './style.css';
 const LoveYourChurchSection: React.FC = () => {
   return (
     <section id="love-your-church" className="love-your-church-section">
-      <div className="container">
+      <div className="container-love-your-church">
         <h2 className="section-title">Ame sua Igreja</h2>
         {/* <div className="bible-verse">
           <blockquote>

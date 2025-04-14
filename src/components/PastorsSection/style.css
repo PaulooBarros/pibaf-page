@@ -8,6 +8,7 @@
   .pastors-section {
     background-color: var(--worship-bg-color);
     color: var(--pastors-text-color);
+    padding: 80px;
   }
   
   .pastor-card {

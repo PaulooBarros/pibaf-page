@@ -7,6 +7,7 @@
   .love-your-church-section {
     background-color: var(--help-bg-color);
     color: var(--help-text-color);
+    padding: 80px;
   }
   
   .bible-verse blockquote {
