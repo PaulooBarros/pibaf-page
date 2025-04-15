@@ -8,15 +8,15 @@
     
     /* Cores por seção */
     --hero-bg-color: #1a4b8c;
-    --about-bg-color: #ffffff;
+    --about-bg-color: #f3f3f3;
     --worship-bg-color: #f0f1f3;
-    --pastors-bg-color: #ffffff;
+    --pastors-bg-color: #f3f3f3;
     --location-bg-color: #f0f1f3;
     --help-bg-color: #f0f1f3;
     --footer-bg-color: #212529;
     
     /* Textos por seção */
-    --hero-text-color: #ffffff;
+    --hero-text-color: #f3f3f3;
     --about-text-color: #212529;
     --worship-text-color: #212529;
     --pastors-text-color: #212529;
@@ -28,7 +28,16 @@
     --container-width: 1200px;
     --section-padding: 100px;
     --header-height: 80px;
+    html {
+      scroll-behavior: smooth;
+    }
+   
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
 
 /* Reset e Base */
 * {
@@ -36,6 +45,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 body {

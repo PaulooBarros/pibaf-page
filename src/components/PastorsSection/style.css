@@ -6,7 +6,8 @@
   }
 
   .pastors-section {
-    background-color: var(--worship-bg-color);
+    /* background-color: var(--worship-bg-color); */
+    background: url('../../assets/ondas.svg');
     color: var(--pastors-text-color);
     padding: 80px;
   }

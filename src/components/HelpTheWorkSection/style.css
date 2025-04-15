@@ -9,7 +9,7 @@
   }
 
   .help-section {
-    background-color: var(--light-color);
+    background-color: var(--location-bg-color);
     color: var(--help-text-color);
   }
   

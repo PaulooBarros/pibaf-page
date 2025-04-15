@@ -1,6 +1,7 @@
 /* Estilos específicos para a seção "Quem Somos" */
 .about-section {
-  background-color: var(--worship-bg-color);
+  /* background-color: var(--worship-bg-color); */
+  background: url('../../assets/ondas.svg');
   color: var(--about-text-color);
   padding: var(--section-padding) 0;
 }
@@ -16,18 +17,6 @@
 .about-content p {
   margin-bottom: 25px;
 }
-
-/* Quando quiser usar imagem de fundo no futuro */
-/*
-.about-section {
-  background: 
-    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
-    url('sua-imagem-de-fundo.jpg');
-  background-size: cover;
-  background-position: center;
-  color: var(--about-text-color);
-}
-*/
 
 /* Responsividade */
 @media (max-width: 768px) {

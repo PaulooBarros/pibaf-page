@@ -1,10 +1,9 @@
-import React from "react";
 import "./style.css";
 import { FaChurch, FaPrayingHands, FaBible } from "react-icons/fa";
 
 const WorshipSection = () => {
   return (
-    <section className="worship-section">
+    <section className="worship-section" id="worship">
       <div className="worship-header">
         <h2 className="worship-title">Horários de Culto</h2>
       </div>

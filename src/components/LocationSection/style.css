@@ -10,7 +10,7 @@
   }
 
   .location-section {
-    background-color: var(--location-bg-color);
+    background-color: var(--about-bg-color);
     color: var(--location-text-color);
   }
   
