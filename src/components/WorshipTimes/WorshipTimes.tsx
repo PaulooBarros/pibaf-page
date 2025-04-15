@@ -1,6 +1,4 @@
 import "./style.css";
-import { FaChurch, FaPrayingHands, FaBible } from "react-icons/fa";
-
 const WorshipSection = () => {
   return (
     <section className="worship-section" id="worship">
@@ -10,7 +8,6 @@ const WorshipSection = () => {
 
       <div className="worship-schedule">
         <div className="worship-day active">
-          <FaChurch className="day-icon" />
           <h4>Terça</h4>
           <div className="times-container">
           <p className="worship-time">19:00h</p>
@@ -18,7 +15,6 @@ const WorshipSection = () => {
         </div>
 
         <div className="worship-day active">
-          <FaPrayingHands className="day-icon" />
           <h4>Quinta</h4>
           <div className="times-container">
           <p className="worship-time">19:30h</p>
@@ -26,7 +22,6 @@ const WorshipSection = () => {
         </div>
 
         <div className="worship-day active">
-          <FaBible className="day-icon" />
           <h4>Domingo</h4>
           <div className="times-container">
             <p className="worship-time">09:00h</p>

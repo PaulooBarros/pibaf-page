@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import "./style.css";
-import logo from "../../assets/logopibafpretoebranco.png";
+import logo from "../../assets/logopibaf.svg";
 
 
 const Navbar: React.FC = () => {
@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
             <img
               src={logo}// Substitua com o caminho da imagem
               alt="PIB Augusto Franco"
-              style={{ height: "250px" }} // Ajuste o tamanho conforme necessário
+              className="pibaflogo"
             />
           </Link>
         </div>

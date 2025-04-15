@@ -1,72 +1,123 @@
 .pastors-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
-    margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  margin-top: 60px;
+}
+
+.pastors-section {
+  background: url('../../assets/ondas.svg');
+  color: var(--pastors-text-color);
+  padding: 80px;
+}
+
+.pastor-card {
+  text-align: center;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  border-top: 4px solid var(--primary-color);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.pastor-card:hover {
+  transform: scale(1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.pastor-card img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 25px;
+  border: 5px solid var(--light-color);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pastor-card h3 {
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.pastor-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 3px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.pastor-card:hover h3::after {
+  width: 60%;
+}
+
+.pastor-role {
+  color: var(--accent-color);
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.pastor-description {
+  color: var(--dark-color);
+  font-style: italic;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .pastors-grid {
+    grid-template-columns: 1fr;
+    gap: 30px; /* Reduzir o gap em telas menores */
+    margin-top: 40px; /* Ajuste do espaçamento superior */
   }
 
-  .pastors-section {
-    /* background-color: var(--worship-bg-color); */
-    background: url('../../assets/ondas.svg');
-    color: var(--pastors-text-color);
-    padding: 80px;
-  }
-  
   .pastor-card {
-    text-align: center;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
+    padding: 20px; /* Ajuste o padding para não ficar tão espaçado */
   }
-  
-  .pastor-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  }
-  
+
   .pastor-card img {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 0 auto 25px;
-    border: 5px solid var(--light-color);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 180px; /* Ajuste do tamanho da imagem */
+    height: 180px;
   }
-  
+
   .pastor-card h3 {
-    color: var(--secondary-color);
-    margin-bottom: 10px;
-    font-size: 1.4rem;
+    font-size: 1.2rem; /* Font menor para se adaptar ao espaço */
   }
-  
-  .pastor-card p {
-    color: var(--dark-color);
-    font-style: italic;
+
+  .pastor-role {
+    font-size: 1rem; /* Reduzir o tamanho da fonte para melhor adaptação */
   }
-  
-  /* Responsividade */
-  @media (max-width: 992px) {
-    .pastors-grid {
-      grid-template-columns: 1fr;
-    }
+
+  .pastor-description {
+    font-size: 0.9rem; /* Ajuste para texto menor */
   }
-  
-  @media (min-width: 1921px) {
-    .pastors-grid {
-      grid-template-columns: repeat(2, 1fr);
-      max-width: 1400px;
-      margin: 80px auto 0;
-    }
-    
-    .pastor-card img {
-      width: 280px;
-      height: 280px;
-    }
-    
-    .pastor-card h3 {
-      font-size: 1.8rem;
-    }
+}
+
+@media (min-width: 1921px) {
+  .pastors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1400px;
+    margin: 80px auto 0;
   }
+
+  .pastor-card img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .pastor-card h3 {
+    font-size: 1.8rem;
+  }
+}

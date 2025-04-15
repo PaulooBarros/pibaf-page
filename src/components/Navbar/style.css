@@ -1,40 +1,52 @@
 /* Estilo especial para o link de doação */
 .donate-link {
-    background-color: var(--accent-color);
-    color: white !important;
-    padding: 8px 20px !important;
-    border-radius: 30px;
-    font-weight: 700 !important;
-    margin-left: 10px;
-    transition: all 0.3s ease;
-  }
-  
-  .donate-link:hover {
-    transform: scale(1.05);
-    color: var(--second-color) !important;
-  }
-  
-  .donate-link::after {
-    display: none !important; /* Remove o sublinhado */
-  }
-  
-  /* Ajustes para mobile */
-  @media (max-width: 768px) {
-    .donate-link {
-      margin-left: 0;
-      margin-top: 10px;
-      display: inline-block;
-      width: auto;
-    }
-  }
-  
-  /* Efeito de pulsação para chamar atenção */
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.010); }
-    100% { transform: scale(1); }
-  }
-  
+  background-color: var(--accent-color);
+  color: white !important;
+  padding: 8px 20px !important;
+  border-radius: 30px;
+  font-weight: 700 !important;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+}
+
+.donate-link:hover {
+  transform: scale(1.05);
+  color: var(--second-color) !important;
+}
+
+.donate-link::after {
+  display: none !important; /* Remove o sublinhado */
+}
+
+/* Ajustes para mobile */
+@media (max-width: 768px) {
   .donate-link {
-    animation: pulse 2s infinite;
+    margin-left: 0;
+    margin-top: 10px;
+    display: inline-block;
+    width: auto;
   }
+
+  .pibaflogo {
+    height: 60px !important; /* Apliquei o !important para garantir que o estilo seja aplicado */
+  }
+}
+
+/* Efeito de pulsação para chamar atenção */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.010); }
+  100% { transform: scale(1); }
+}
+
+.donate-link {
+  animation: pulse 2s infinite;
+}
+
+.pibaflogo {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
