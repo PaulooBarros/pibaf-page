@@ -1,7 +1,7 @@
 /* Estilo especial para o link de doação */
 .donate-link {
     background-color: var(--accent-color);
-    color: var(--dark-color) !important;
+    color: white !important;
     padding: 8px 20px !important;
     border-radius: 30px;
     font-weight: 700 !important;
@@ -11,7 +11,7 @@
   
   .donate-link:hover {
     transform: scale(1.05);
-    color: white !important;
+    color: var(--second-color) !important;
   }
   
   .donate-link::after {

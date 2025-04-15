@@ -1,130 +1,285 @@
+.worship-section {
+  background-color: var(--light-color);
+  color: var(--worship-text-color);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.worship-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.03)" d="M0,0 L100,0 L100,100 Q50,80 0,100 Z"></path></svg>');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
 .worship-header {
-    text-align: center;
-    margin-bottom: 50px;
-    padding: 16px;
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.worship-title {
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.worship-subtitle {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  font-weight: 400;
+  margin-top: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.worship-subtitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--accent-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease;
+}
+
+.worship-header:hover .worship-subtitle::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.worship-schedule {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin: 60px auto;
+  max-width: 900px;
+  position: relative;
+  z-index: 1;
+}
+
+.worship-day {
+  text-align: center;
+  padding: 30px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  flex: 1;
+  max-width: 250px;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.worship-day::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--accent-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.worship-day:hover::before,
+.worship-day.active::before {
+  transform: scaleX(1);
+}
+
+.worship-day.active {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.day-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+  display: none;
+}
+
+.worship-day:hover .day-icon {
+  transform: scale(1.1);
+}
+
+.worship-day h4 {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.worship-day h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.worship-day:hover h4::after {
+  width: 80px;
+}
+
+.times-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.worship-time {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 12px;
+  margin: 0 10px 10px 0;
+  transition: all 0.3s ease;
+}
+
+
+.worship-time::before {
+  content: '';
+  display: none;
+}
+
+.worship-footer {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.worship-footer p {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  font-style: italic;
+  position: relative;
+  display: inline-block;
+}
+
+.worship-footer p::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .worship-section {
+    padding: 60px 0;
   }
 
-  .worship-section {
-    background-color: var(--light-color);
-    color: var(--worship-text-color);
-  }
-  
   .worship-title {
-    font-size: 3.5rem;
-    color: var(--primary-color);
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: 0;
+    font-size: 2.8rem;
   }
-  
+
   .worship-subtitle {
-    font-size: 2rem;
-    color: var(--secondary-color);
-    font-weight: 400;
-    margin-top: 0;
-    position: relative;
-    display: inline-block;
-  }
-  
-  .worship-subtitle::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: var(--accent-color);
-  }
-  
-  .worship-schedule {
-    display: flex;
-    justify-content: center;
-    gap: 80px;
-    margin: 60px auto;
-    max-width: 600px;
-  }
-  
-  .worship-day {
-    text-align: center;
-  }
-  
-  .worship-day h4 {
     font-size: 1.8rem;
-    color: var(--secondary-color);
-    margin-bottom: 20px;
-    position: relative;
-    padding-bottom: 10px;
   }
-  
-  .worship-day h4::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 2px;
-    background: var(--accent-color);
+
+  .worship-schedule {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    max-width: 400px;
   }
-  
-  .worship-day p {
-    font-size: 1.5rem;
-    color: black;
-    margin: 15px 0;
-    font-weight: 500;
+
+  .worship-day {
+    width: 100%;
+    max-width: 300px;
+    padding: 25px;
   }
-  
-  .worship-footer {
-    text-align: center;
-    margin-top: 60px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    font-size: 0.9rem;
-    color: black;
+
+  .worship-day h4 {
+    font-size: 1.6rem;
   }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .worship-title {
-      font-size: 2.8rem;
-    }
-    
-    .worship-subtitle {
-      font-size: 1.8rem;
-    }
-    
-    .worship-schedule {
-      flex-direction: column;
-      gap: 40px;
-    }
-    
-    .worship-day h4 {
-      font-size: 1.6rem;
-    }
-    
-    .worship-day p {
-      font-size: 1.3rem;
-    }
+
+  .worship-time {
+    font-size: 1.3rem;
   }
-  
-  @media (min-width: 1921px) {
-    .worship-title {
-      font-size: 4rem;
-    }
-    
-    .worship-subtitle {
-      font-size: 2.5rem;
-    }
-    
-    .worship-day h4 {
-      font-size: 2.2rem;
-    }
-    
-    .worship-day p {
-      font-size: 1.8rem;
-    }
-    
-    .worship-footer {
-      font-size: 1.1rem;
-    }
+
+  .day-icon {
+    font-size: 2rem;
   }
+}
+
+@media (min-width: 1921px) {
+  .worship-title {
+    font-size: 4rem;
+  }
+
+  .worship-subtitle {
+    font-size: 2.5rem;
+  }
+
+  .worship-day h4 {
+    font-size: 2.2rem;
+  }
+
+  .worship-time {
+    font-size: 1.8rem;
+  }
+
+  .worship-footer p {
+    font-size: 1.4rem;
+  }
+
+  .day-icon {
+    font-size: 3rem;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.worship-day:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.worship-day:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.worship-day:nth-child(3) {
+  animation-delay: 0.3s;
+}

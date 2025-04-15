@@ -4,7 +4,7 @@ import { Video } from '../types/types';
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 const CHANNEL_ID = import.meta.env.VITE_CHANNEL_ID;
-const MAX_RESULTS = 3;
+const MAX_RESULTS = 4;
 
 const YouTubeVideos: React.FC = () => {
   const [videos, setVideos] = useState<Video[]>([]);

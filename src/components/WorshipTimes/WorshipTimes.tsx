@@ -1,33 +1,46 @@
-import React from 'react';
-import './style.css';
+import React from "react";
+import "./style.css";
+import { FaChurch, FaPrayingHands, FaBible } from "react-icons/fa";
 
-const WorshipTimes: React.FC = () => {
+const WorshipSection = () => {
   return (
-    <section id="worship" className="worship-section">
-      <div className="container">
-        <div className="worship-header">
-          <h2 className="worship-title">Horário</h2>
-          <h3 className="worship-subtitle">dos Cultos</h3>
-        </div>
-        
-        <div className="worship-schedule">
-          <div className="worship-day">
-            <h4>Quinta</h4>
-            <p>19:30h</p>
-          </div>
-          
-          <div className="worship-day">
-            <h4>Domingo</h4>
-            <p>09:00h</p>
-            <p>18:00h</p>
+    <section className="worship-section">
+      <div className="worship-header">
+        <h2 className="worship-title">Horários de Culto</h2>
+      </div>
+
+      <div className="worship-schedule">
+        <div className="worship-day active">
+          <FaChurch className="day-icon" />
+          <h4>Terça</h4>
+          <div className="times-container">
+          <p className="worship-time">19:00h</p>
           </div>
         </div>
-        
-        <div className="worship-footer">
+
+        <div className="worship-day active">
+          <FaPrayingHands className="day-icon" />
+          <h4>Quinta</h4>
+          <div className="times-container">
+          <p className="worship-time">19:30h</p>
+          </div>
         </div>
+
+        <div className="worship-day active">
+          <FaBible className="day-icon" />
+          <h4>Domingo</h4>
+          <div className="times-container">
+            <p className="worship-time">09:00h</p>
+            <p className="worship-time">18:00h</p>{" "}
+          </div>
+        </div>
+      </div>
+
+      <div className="worship-footer">
+        <p>Venha adorar conosco. Esperamos por você!</p>
       </div>
     </section>
   );
 };
 
-export default WorshipTimes;
+export default WorshipSection;
