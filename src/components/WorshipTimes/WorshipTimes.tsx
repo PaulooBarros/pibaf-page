@@ -17,7 +17,7 @@ const WorshipSection = () => {
         <div className="worship-day active">
           <h4>Quinta</h4>
           <div className="times-container">
-          <p className="worship-time">19:30h</p>
+          <p className="worship-time">19:30h</p>  
           </div>
         </div>
 

@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
           >
             Pastores
           </Link>
-          {/* <Link to="ministries" smooth={true} duration={500} onClick={() => setIsOpen(false)}>Ministérios</Link> */}
+          <Link to="ministries" smooth={true} duration={100} onClick={() => setIsOpen(false)}>Ministérios</Link>
           <Link
             to="youtube"
             smooth={true}

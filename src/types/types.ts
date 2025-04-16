@@ -8,7 +8,8 @@ export interface Pastor {
   
   export interface Ministry {
     name: string;
-    description: string;
+    description?: string;
+    logo: string;
   }
   
   export interface WorshipTime {
