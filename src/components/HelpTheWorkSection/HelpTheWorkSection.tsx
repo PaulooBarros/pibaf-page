@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css';
+import qrCodeImage from "../../assets/qrcodemissoes.png"
 // import qrCodeImage from './path-to-your-qr-code.png'; // Substitua pelo caminho real da sua imagem
 
 const HelpTheWorkSection: React.FC = () => {
@@ -21,11 +22,11 @@ const HelpTheWorkSection: React.FC = () => {
             <div className="pix-method">
               <h3>Doação via PIX</h3>
               <div className="qr-code-container">
-                {/* <img src={qrCodeImage} alt="QR Code para doação PIX" className="qr-code" /> */}
+                <img src={qrCodeImage} alt="QR Code para doação PIX" className="qr-code" />
               </div>
               <div className="pix-info">
                 <h4>Chave PIX (CNPJ):</h4>
-                <p className="pix-key">12.345.678/0001-90</p> {/* Substitua pelo CNPJ real */}
+                <p className="pix-key">19.335.393/0001-12</p> {/* Substitua pelo CNPJ real */}
                 <p className="pix-instructions">
                   Escaneie o QR Code ou use a chave PIX acima para contribuir
                 </p>

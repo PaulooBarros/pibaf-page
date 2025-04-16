@@ -2,6 +2,7 @@
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
+    
   }
   
   .bible-verse {
@@ -9,7 +10,8 @@
   }
 
   .help-section {
-    background-color: var(--location-bg-color);
+    /* background-color: var(--location-bg-color); */
+    background: url('../../assets/ondas.svg');
     color: var(--help-text-color);
   }
   

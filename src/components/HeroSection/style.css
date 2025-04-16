@@ -37,7 +37,7 @@
 }
 
 .church-call {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   margin-bottom: 40px;
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
   color: var(--accent-color);
@@ -167,7 +167,7 @@
   }
   
   .church-call {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
   
   .bible-verse blockquote {

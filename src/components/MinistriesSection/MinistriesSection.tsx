@@ -15,7 +15,7 @@ const MinistriesSection: React.FC = () => {
       logo: jovensLogo
     },
     {
-      name: "Teens Pibaf",
+      name: "Ministério Teens",
       // description: "Escola Bíblica e atividades para adolescentes",
       logo: teensLogo
     },
