@@ -7,7 +7,7 @@ const YouTubeSection: React.FC = () => {
   return (
     <section id="youtube" className="section youtube-section">
       <div className="container">
-        <h2 className="section-title">Últimas Postagens</h2>
+        <h2 className="section-title">Mensagens</h2>
         {/* Componente que busca e renderiza os vídeos automaticamente */}
         <YouTubeVideos />
       </div>

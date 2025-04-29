@@ -1,6 +1,6 @@
 .youtube-section {
-    background-color: var(--about-bg-color); 
-    /* background: url('../../assets/ondas.svg'); */
+    /* background-color: var(--about-bg-color);  */
+    background: url('../../assets/ondas.svg');
     padding: var(--section-padding) 0;
   }
   

@@ -39,14 +39,14 @@ const Navbar: React.FC = () => {
           >
             Quem Somos
           </Link>
-          <Link
+          {/* <Link
             to="worship-section"
             smooth={true}
             duration={100}
             onClick={() => setIsOpen(false)}
           >
             Horários
-          </Link>
+          </Link> */}
           <Link
             to="pastors"
             smooth={true}
@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
             onClick={() => setIsOpen(false)}
             className="donate-link"
           >
-            Ajude esta Obra
+            Doações
           </Link>
         </div>
         <div className="navbar-toggle" onClick={() => setIsOpen(!isOpen)}>
