@@ -8,7 +8,6 @@ const YouTubeSection: React.FC = () => {
     <section id="youtube" className="section youtube-section">
       <div className="container">
         <h2 className="section-title">Mensagens</h2>
-        {/* Componente que busca e renderiza os vídeos automaticamente */}
         <YouTubeVideos />
       </div>
     </section>
