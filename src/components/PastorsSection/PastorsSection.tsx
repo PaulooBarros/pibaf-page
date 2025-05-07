@@ -1,8 +1,9 @@
 import React from 'react';
 import { Pastor } from '../../types/types';
 import "./style.css"
-import PrNilton from "../../assets/pr nilton.png";
-import PrZilton from "../../assets/pr zilton.png"
+// import PrNilton from "../../assets/pastorNilton2.jpg";
+// import PrZilton from "../../assets/pastorZilton.jpg"
+import AvatarGenerico from "../../assets/avatarGenerico.jpg"
 
 // No PastorsSection.tsx
 const PastorsSection: React.FC = () => {
@@ -10,13 +11,13 @@ const PastorsSection: React.FC = () => {
       {
         name: "Pr. Nilton Melo",
         role: "Pastor Sênior",
-        image: PrNilton,
+        image: AvatarGenerico,
         description: "Liderança espiritual e visão pastoral"
       },
       {
         name: "Pr. Zilton Santos",
         role: "Pastor Auxiliar",
-        image: PrZilton,
+        image: AvatarGenerico,
         description: "Acompanhamento e discipulado"
       }
     ];
