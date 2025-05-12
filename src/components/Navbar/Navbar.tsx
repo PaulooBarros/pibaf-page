@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
           <Link
             to="about"
             smooth={true}
-            duration={100}
+            duration={800}
             onClick={() => setIsOpen(false)}
           >
             Quem Somos
@@ -50,16 +50,16 @@ const Navbar: React.FC = () => {
           <Link
             to="pastors"
             smooth={true}
-            duration={100}
+            duration={800}
             onClick={() => setIsOpen(false)}
           >
             Pastores
           </Link>
-          <Link to="ministries" smooth={true} duration={100} onClick={() => setIsOpen(false)}>Ministérios</Link>
+          <Link to="ministries" smooth={true} duration={800} onClick={() => setIsOpen(false)}>Ministérios</Link>
           <Link
             to="youtube"
             smooth={true}
-            duration={100}
+            duration={800}
             onClick={() => setIsOpen(false)}
           >
             Mensagens
@@ -67,7 +67,7 @@ const Navbar: React.FC = () => {
           <Link
             to="location"
             smooth={true}
-            duration={100}
+            duration={800}
             onClick={() => setIsOpen(false)}
           >
             Localização
@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
           <Link
             to="help"
             smooth={true}
-            duration={100}
+            duration={800}
             onClick={() => setIsOpen(false)}
             className="donate-link"
           >

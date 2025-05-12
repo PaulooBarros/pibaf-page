@@ -12,6 +12,7 @@
   .location-section {
     background-color: var(--about-bg-color);
     color: var(--location-text-color);
+    padding: 5rem;
   }
   
   .google-map {
