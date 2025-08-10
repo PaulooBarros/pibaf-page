@@ -21,8 +21,11 @@ export interface Pastor {
  export interface Video {
     id: {
       videoId: string;
+      
     };
     snippet: {
       title: string;
+      publishedAt?: any;
+      description?: string;
     };
   }

@@ -37,6 +37,9 @@ const Navbar: React.FC = () => {
           <NavLink to="about" onClick={() => setIsOpen(false)}>
             Quem Somos
           </NavLink>
+          <NavLink to="worship" onClick={() => setIsOpen(false)}>
+            Horários
+          </NavLink>
           <NavLink to="pastors" onClick={() => setIsOpen(false)}>
             Pastores
           </NavLink>

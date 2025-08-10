@@ -1,9 +1,8 @@
-/* style.css */
 :root {
   --primary-color: #b58a5a;
   --text-color: #f5f5f5;
-  --text-color-scrolled: #ffffff; /* Cor mais forte quando scrolled */
-  --bg-dark: rgba(10, 10, 10, 0.95);
+  --text-color-scrolled: #ffffff;
+  --bg-dark: rgba(10, 10, 10, 0.98); /* Fundo mais opaco */
   --transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
@@ -26,10 +25,10 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Ajuste para os links quando scrolled */
+/* Links quando scrolled */
 .navbar.scrolled .navbar-links a {
   color: var(--text-color-scrolled);
-  opacity: 0.95;
+  opacity: 0.9;
 }
 
 .navbar.scrolled .navbar-links a:hover,
@@ -38,12 +37,12 @@
   opacity: 1;
 }
 
-/* Ajuste para o toggle quando scrolled */
+/* Toggle quando scrolled */
 .navbar.scrolled .navbar-toggle span {
   background: var(--text-color-scrolled);
 }
 
-/* Restante do seu CSS permanece igual */
+/* Container principal */
 .navbar .container {
   display: flex;
   align-items: center;
@@ -53,6 +52,7 @@
   padding: 0 2rem;
 }
 
+/* Logo */
 .pibaflogo {
   height: 13rem;
   transition: transform 0.3s ease;
@@ -62,6 +62,7 @@
   transform: scale(1.05);
 }
 
+/* Links da Navbar */
 .navbar-links {
   display: flex;
   gap: 2.5rem;
@@ -132,6 +133,22 @@
 
 .navbar-toggle.open span:nth-child(3) {
   transform: translateY(-0.65rem) rotate(-45deg);
+}
+
+/* Menu Mobile Aberto - Correções de Legibilidade */
+.navbar.scrolled .navbar-links.active {
+  background: rgba(20, 20, 20, 0.98);
+  backdrop-filter: blur(15px);
+}
+
+.navbar.scrolled .navbar-links.active a {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.navbar.scrolled .navbar-toggle.open span {
+  background: var(--primary-color) !important;
 }
 
 /* Responsividade */

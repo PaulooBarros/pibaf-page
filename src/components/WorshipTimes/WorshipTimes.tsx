@@ -31,7 +31,7 @@ const WorshipSection = () => {
     <section className="worship-section" id="worship" ref={sectionRef}>
       <div className="worship-container">
         <div className="worship-header">
-          <h2 className="worship-title">
+          <h2 className="section-title">
             <span className="title-decoration"></span>
             Horário dos Cultos
             <span className="title-decoration"></span>

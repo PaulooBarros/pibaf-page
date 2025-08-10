@@ -20,7 +20,7 @@ const App: React.FC = () => {
         <AboutSection />
         <WorshipTimes />
         <PastorsSection />
-        <YouTubeSection />
+        {/* <YouTubeSection /> */}
         <HelpTheWorkSection />
       </main>
       <Footer />

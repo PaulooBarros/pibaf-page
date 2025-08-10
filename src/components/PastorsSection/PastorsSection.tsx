@@ -66,7 +66,7 @@ const PastorsSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="pastors-section" ref={sectionRef}>
+    <section className="pastors-section" id="pastors" ref={sectionRef}>
       <div className="pastors-container">
         <div className="section-header">
           <span className="section-label">Nossos Pastores</span>
