@@ -10,11 +10,6 @@ const AboutSection: React.FC = () => {
   const [currentImg, setCurrentImg] = useState<string | null>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  const openLightbox = (imgSrc: string) => {
-    setCurrentImg(imgSrc);
-    setLightboxOpen(true);
-    document.body.style.overflow = 'hidden';
-  };
 
   const closeLightbox = () => {
     setLightboxOpen(false);
