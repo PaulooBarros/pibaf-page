@@ -1,51 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+
+
 :root {
-    /* Cores base */
-    --primary-color: #064459;
-    --secondary-color: #0d2b4e;
-    --accent-color: #f8892f;
-    --light-color: #f8f9fa;
-    --dark-color: #212529;
-    
-    /* Cores por seção */
-    --hero-bg-color: #1a4b8c;
-    --about-bg-color: #f3f3f3;
-    --worship-bg-color: #f0f1f3;
-    --pastors-bg-color: #f3f3f3;
-    --location-bg-color: #f0f1f3;
-    --help-bg-color: #f0f1f3;
-    --footer-bg-color: #212529;
-    
-    /* Textos por seção */
-    --hero-text-color: #f3f3f3;
-    --about-text-color: #212529;
-    --worship-text-color: #212529;
-    --pastors-text-color: #212529;
-    --location-text-color: #212529;
-    --help-text-color: #212529;
-    --footer-text-color: #ffffff;
-    
-    /* Outras variáveis */
-    --container-width: 1200px;
-    --section-padding: 100px;
-    --header-height: 80px;
-    html {
-      scroll-behavior: smooth;
-    }
-   
-  }
+  /* Cores base */
+  --primary-color: #eb0505;
+  --secondary-color: #0d2b4e;
+  --accent-color: #f2c563;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+
+  /* Cores por seção */
+  --hero-bg-color: #1a4b8c;
+  --about-bg-color: #f3f3f3;
+  --worship-bg-color: #f0f1f3;
+  --pastors-bg-color: #f3f3f3;
+  --location-bg-color: #f0f1f3;
+  --help-bg-color: #f0f1f3;
+  --footer-bg-color: #212529;
+
+  /* Textos por seção */
+  --hero-text-color: #f3f3f3;
+  --about-text-color: #212529;
+  --worship-text-color: #212529;
+  --pastors-text-color: #212529;
+  --location-text-color: #212529;
+  --help-text-color: #212529;
+  --footer-text-color: #ffffff;
+
+  /* Outras variáveis */
+  --container-width: 1200px;
+  --section-padding: 100px;
+  --header-height: 80px;
 
   html {
     scroll-behavior: smooth;
   }
-  
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 /* Reset e Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+  font-family: 'Outfit', sans-serif;
 }
 
 body {
@@ -153,7 +156,7 @@ main {
     --section-padding: 60px;
     --header-height: 70px;
   }
-  
+
   .section-title {
     font-size: 2.2rem;
   }
@@ -163,15 +166,15 @@ main {
   :root {
     --section-padding: 50px;
   }
-  
+
   .container {
     padding: 0 20px;
   }
-  
+
   .section-title {
     font-size: 2rem;
   }
-  
+
   .btn {
     padding: 10px 20px;
     font-size: 1rem;
@@ -185,11 +188,11 @@ main {
     --section-padding: 120px;
     --header-height: 100px;
   }
-  
+
   .section-title {
     font-size: 3.5rem;
   }
-  
+
   .section-title::after {
     height: 4px;
     bottom: -20px;
@@ -200,7 +203,7 @@ main {
   :root {
     --container-width: 2000px;
   }
-  
+
   .section-title {
     font-size: 4rem;
   }

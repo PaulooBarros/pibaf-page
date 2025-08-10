@@ -1,52 +1,129 @@
-/* Estilo especial para o link de doação */
-.donate-link {
-  background-color: var(--accent-color);
-  color: white !important;
-  padding: 8px 20px !important;
-  border-radius: 30px;
-  font-weight: 700 !important;
-  margin-left: 10px;
-  transition: all 0.3s ease;
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 12px 0;
+  background: rgba(0, 0, 0, 0.4); /* leve transparência */
+  backdrop-filter: blur(10px); /* efeito vidro */
+  z-index: 999;
+  transition: background 0.3s ease;
 }
 
-.donate-link:hover {
-  transform: scale(1.05);
-  color: var(--second-color) !important;
-}
-
-.donate-link::after {
-  display: none !important; /* Remove o sublinhado */
-}
-
-/* Ajustes para mobile */
-@media (max-width: 768px) {
-  .donate-link {
-    margin-left: 0;
-    margin-top: 10px;
-    display: inline-block;
-    width: auto;
-  }
-
-  .pibaflogo {
-    height: 60px !important; /* Apliquei o !important para garantir que o estilo seja aplicado */
-  }
-}
-
-/* Efeito de pulsação para chamar atenção */
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.010); }
-  100% { transform: scale(1); }
-}
-
-.donate-link {
-  animation: pulse 2s infinite;
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .pibaflogo {
-  height: 80px;
+  height: 70px;
+  transition: transform 0.3s ease;
+}
+
+.pibaflogo:hover {
+  transform: scale(1.05);
+}
+
+.navbar-links {
   display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
+  gap: 25px;
+}
+
+.navbar-links a {
+  /* font-family: 'Cormorant Garamond', serif; */
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--primary-color);
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+/* Estilo especial para o link de doação */
+.donate-link {
+  background-color: var(--primary-color);
+  color: white !important;
+  padding: 8px 20px !important;
+  border-radius: 8px;
+  font-weight: 700 !important;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.donate-link:hover {
+  background-color: white;
+  color: var(--primary-color) !important;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+/* Toggle menu (mobile) */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .navbar-links.active {
+    max-height: 300px;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .donate-link {
+    margin-left: 0;
+    margin-top: 10px;
+  }
 }

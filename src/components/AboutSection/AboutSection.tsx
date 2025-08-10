@@ -1,21 +1,43 @@
 import React from 'react';
-import "./style.css"; // Mude para o CSS específico do componente
-
+import "./style.css";
+import logoConvencao from "../../assets/CBS.png";
+import logoIgreja from "../../assets/logo PIBAF png.png"; // nova logo
+import igrejaFoto1 from "../../assets/pibaf11anos.jpg"; // primeira foto
+import igrejaFoto2 from "../../../public/pibaf10anos redimensionada.jpg"
 const AboutSection: React.FC = () => {
   return (
     <section id="about" className="section about-section">
-      <div className="container">
-        <h2 className="section-title">Quem Somos</h2>
-        <div className="about-content">
+      <div className="container about-grid">
+        
+        {/* Coluna Texto */}
+        <div className="about-text">
+          <h2 className="section-title">Quem Somos</h2>
           <p>
-            A Primeira Igreja Batista em Augusto Franco é uma comunidade cristã comprometida com o ensino bíblico,
-            a adoração genuína e o serviço ao próximo. Localizada em Aracaju/SE, temos como missão anunciar o 
-            Evangelho de Jesus Cristo e discipular pessoas para transformação de vidas.
+            Há 12 anos, a <strong>Primeira Igreja Batista em Augusto Franco</strong> tem sido um lugar de adoração,
+            comunhão e transformação de vidas. Nossa missão é proclamar o Evangelho de Jesus Cristo com fidelidade
+            bíblica, formando discípulos que amam a Deus e servem ao próximo.
           </p>
           <p>
-            Nossa visão é ser uma igreja relevante, acolhedora e cheia do Espírito Santo, impactando nossa cidade 
-            e estado com o amor de Deus através de nossos cultos, ministérios e ações sociais.
+            Como parte da <strong>Convenção Batista Brasileira e Convenção Batista Sergipana</strong>, estamos comprometidos com a pregação da
+            Palavra, a prática do amor cristão e o engajamento em ações que impactam nossa cidade e estado.
           </p>
+          <p>
+            Ao longo de nossa história, testemunhamos vidas sendo restauradas, famílias fortalecidas e comunidades
+            alcançadas pela graça de Deus. Somos uma igreja que olha para o futuro com fé e expectativa, desejando
+            ser luz onde Ele nos enviar.
+          </p>
+
+          {/* Logos */}
+          <div className="about-logos">
+            <img src={logoIgreja} alt="Logo da Igreja" />
+            <img src={logoConvencao} alt="Logo Convenção Batista Brasileira" />
+          </div>
+        </div>
+
+        {/* Coluna Fotos */}
+        <div className="about-photos">
+          <img src={igrejaFoto1} alt="Foto da Igreja 1" />
+          <img src={igrejaFoto2} alt="Foto da Igreja 2" />
         </div>
       </div>
     </section>
