@@ -1,7 +1,7 @@
 // YouTubeSection.tsx
 import React from 'react';
 import './style.css';
-import YouTubeVideos from '../../services/YoutubeAPI';
+import YouTubeVideos from '../../services/youtubeAPI';
 
 const YouTubeSection: React.FC = () => {
   return (
