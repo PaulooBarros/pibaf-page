@@ -1,15 +1,22 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import "./style.css";
-import logo from "../../../public/logoPibafEscrita.png"
-// import logo2 from "../../assets/logo PIBAF png.png"
-
+import logo from "../../../public/logoPibafEscrita.png";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [scrolled, setScrolled] = useState<boolean>(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="container">
         <div className="navbar-brand">
           <Link
@@ -17,14 +24,9 @@ const Navbar: React.FC = () => {
             smooth={true}
             duration={500}
             onClick={() => setIsOpen(false)}
-            style={{
-              cursor: "pointer",
-              color: "white",
-              textDecoration: "none",
-            }}
           >
             <img
-              src={logo}// Substitua com o caminho da imagem
+              src={logo}
               alt="PIB Augusto Franco"
               className="pibaflogo"
             />
@@ -32,57 +34,25 @@ const Navbar: React.FC = () => {
         </div>
 
         <div className={`navbar-links ${isOpen ? "active" : ""}`}>
-          <Link
-            to="about"
-            smooth={true}
-            duration={800}
-            onClick={() => setIsOpen(false)}
-          >
+          <NavLink to="about" onClick={() => setIsOpen(false)}>
             Quem Somos
-          </Link>
-          {/* <Link
-            to="worship-section"
-            smooth={true}
-            duration={100}
-            onClick={() => setIsOpen(false)}
-          >
-            Horários
-          </Link> */}
-          <Link
-            to="pastors"
-            smooth={true}
-            duration={800}
-            onClick={() => setIsOpen(false)}
-          >
+          </NavLink>
+          <NavLink to="pastors" onClick={() => setIsOpen(false)}>
             Pastores
-          </Link>
-          <Link to="ministries" smooth={true} duration={800} onClick={() => setIsOpen(false)}>Ministérios</Link>
-          <Link
-            to="youtube"
-            smooth={true}
-            duration={800}
-            onClick={() => setIsOpen(false)}
-          >
+          </NavLink>
+          <NavLink to="youtube" onClick={() => setIsOpen(false)}>
             Mensagens
-          </Link>
-          <Link
-            to="location"
-            smooth={true}
-            duration={800}
-            onClick={() => setIsOpen(false)}
-          >
-            Localização
-          </Link>
-          <Link
-            to="help"
-            smooth={true}
-            duration={800}
-            onClick={() => setIsOpen(false)}
-          >
+          </NavLink>
+          <NavLink to="help" onClick={() => setIsOpen(false)}>
             Doações
-          </Link>
+          </NavLink>
         </div>
-        <div className="navbar-toggle" onClick={() => setIsOpen(!isOpen)}>
+        
+        <div 
+          className={`navbar-toggle ${isOpen ? "open" : ""}`} 
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Menu"
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -91,5 +61,19 @@ const Navbar: React.FC = () => {
     </nav>
   );
 };
+
+// Componente auxiliar para estilização consistente dos links
+const NavLink: React.FC<{to: string; onClick: () => void; children: React.ReactNode}> = ({to, onClick, children}) => (
+  <Link
+    to={to}
+    smooth={true}
+    duration={800}
+    onClick={onClick}
+    activeClass="active-link"
+    spy={true}
+  >
+    {children}
+  </Link>
+);
 
 export default Navbar;

@@ -1,25 +1,60 @@
+/* style.css */
+:root {
+  --primary-color: #b58a5a;
+  --text-color: #f5f5f5;
+  --text-color-scrolled: #ffffff; /* Cor mais forte quando scrolled */
+  --bg-dark: rgba(10, 10, 10, 0.95);
+  --transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 12px 0;
-  background: rgba(0, 0, 0, 0.4); /* leve transparência */
-  backdrop-filter: blur(10px); /* efeito vidro */
-  z-index: 999;
-  transition: background 0.3s ease;
+  padding: 1rem 0;
+  background: transparent;
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  transition: var(--transition);
+  border-bottom: 1px solid transparent;
 }
 
+.navbar.scrolled {
+  background: var(--bg-dark);
+  backdrop-filter: blur(10px);
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Ajuste para os links quando scrolled */
+.navbar.scrolled .navbar-links a {
+  color: var(--text-color-scrolled);
+  opacity: 0.95;
+}
+
+.navbar.scrolled .navbar-links a:hover,
+.navbar.scrolled .navbar-links a.active-link {
+  color: var(--primary-color);
+  opacity: 1;
+}
+
+/* Ajuste para o toggle quando scrolled */
+.navbar.scrolled .navbar-toggle span {
+  background: var(--text-color-scrolled);
+}
+
+/* Restante do seu CSS permanece igual */
 .navbar .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 2rem;
 }
 
 .pibaflogo {
-  height: 200px;
+  height: 13rem;
   transition: transform 0.3s ease;
 }
 
@@ -29,81 +64,131 @@
 
 .navbar-links {
   display: flex;
-  gap: 25px;
+  gap: 2.5rem;
 }
 
 .navbar-links a {
-  /* font-family: 'Cormorant Garamond', serif; */
-  font-size: 1.5rem;
-  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--text-color);
   text-decoration: none;
+  letter-spacing: 1px;
   position: relative;
-  transition: color 0.3s ease;
+  padding: 0.5rem 0;
+  transition: var(--transition);
+  opacity: 0.9;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active-link {
+  color: var(--primary-color);
+  opacity: 1;
 }
 
 .navbar-links a::after {
   content: '';
   position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -4px;
+  width: 0;
+  height: 1px;
+  bottom: 0;
   left: 0;
-  background-color: var(--primary-color);
-  transition: width 0.3s ease;
+  background: var(--primary-color);
+  transition: var(--transition);
 }
 
-.navbar-links a:hover {
-  color: var(--primary-color);
-}
-
-.navbar-links a:hover::after {
+.navbar-links a:hover::after,
+.navbar-links a.active-link::after {
   width: 100%;
 }
 
-
-
-
-/* Toggle menu (mobile) */
+/* Menu Mobile */
 .navbar-toggle {
   display: none;
   flex-direction: column;
-  gap: 4px;
+  justify-content: space-between;
+  width: 2rem;
+  height: 1.5rem;
   cursor: pointer;
+  z-index: 1001;
 }
 
 .navbar-toggle span {
-  width: 25px;
-  height: 3px;
-  background: black;
-  border-radius: 2px;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--text-color);
+  transition: var(--transition);
+  transform-origin: center;
 }
 
-/* Mobile */
+.navbar-toggle.open span:nth-child(1) {
+  transform: translateY(0.65rem) rotate(45deg);
+}
+
+.navbar-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.open span:nth-child(3) {
+  transform: translateY(-0.65rem) rotate(-45deg);
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
+  .navbar .container {
+    padding: 0 1.5rem;
+  }
+  
+  .pibaflogo {
+    height: 6rem;
+  }
+  
   .navbar-links {
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    height: 100vh;
+    background: var(--bg-dark);
     flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    clip-path: circle(0% at 90% 5%);
+    transition: clip-path 0.8s ease-in-out;
+    pointer-events: none;
   }
-
+  
   .navbar-links.active {
-    max-height: 320px;
+    clip-path: circle(150% at 90% 5%);
+    pointer-events: all;
   }
-
+  
+  .navbar-links a {
+    font-size: 1.4rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  
+  .navbar-links.active a {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .navbar-links a:nth-child(1) { transition-delay: 0.2s; }
+  .navbar-links a:nth-child(2) { transition-delay: 0.3s; }
+  .navbar-links a:nth-child(3) { transition-delay: 0.4s; }
+  .navbar-links a:nth-child(4) { transition-delay: 0.5s; }
+  
   .navbar-toggle {
     display: flex;
   }
+}
 
-  .donate-link {
-    margin-left: 0;
-    margin-top: 10px;
+@media (max-width: 480px) {
+  .pibaflogo {
+    height: 12rem;
   }
 }
