@@ -12,7 +12,7 @@
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  gap: 120px;
   align-items: center;
 }
 
@@ -20,7 +20,7 @@
 .section-title {
   font-size: clamp(2rem, 2.5vw, 2.8rem);
   margin-bottom: 20px;
-  color: #e30613;
+  color: black;
   font-weight: 700;
   text-align: center;
   /* CENTRALIZADO */
@@ -30,16 +30,6 @@
   align-content: center;
   justify-content: center;
 }
-
-/* .section-title::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background-color: #d4a017;
-  margin: 12px auto 25px auto;
-  border-radius: 2px;
-} */
 
 /* Texto */
 .about-text {

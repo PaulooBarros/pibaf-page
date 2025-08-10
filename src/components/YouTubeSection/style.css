@@ -4,13 +4,7 @@
     padding: var(--section-padding) 0;
   }
   
-  /* TÍTULO */
-  .section-title {
-    text-align: center;
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 40px;
-  }
+
   
   /* VÍDEO EM DESTAQUE */
   .highlighted-video {
