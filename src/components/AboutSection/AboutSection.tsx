@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./style.css";
 import logoConvencao from "../../assets/CBS.png";
 import logoIgreja from "../../assets/logo PIBAF png.png";
-import igrejaFoto1 from "../../assets/pibaf11anos.jpg";
+import igrejaFoto1 from "../../../public/pibaf11anos.jpg";
 import igrejaFoto2 from "../../../public/pibaf10anos redimensionada.jpg";
 
 const AboutSection: React.FC = () => {
