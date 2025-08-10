@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Pastor } from "../../types/types";
 import "./style.css";
-import pastorNilton from "../../assets/PrNilton2.jpeg";
+import pastorNilton from "../../assets/PrNilton1redimensionada.jpeg";
 import pastorZilton from "../../assets/PrZilton.jpeg";
 
 const PastorsSection: React.FC = () => {

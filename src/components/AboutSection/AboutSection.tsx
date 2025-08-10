@@ -22,6 +22,24 @@ const AboutSection: React.FC = () => {
     document.body.style.overflow = 'auto';
   };
 
+  // Fechar lightbox com ESC
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    };
+
+    if (lightboxOpen) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [lightboxOpen]);
+
+  // Observer para animações
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -90,29 +108,19 @@ const AboutSection: React.FC = () => {
 
           {/* Photos Column */}
           <div className="about-photos">
-            <div className="photo-about-container" onClick={() => openLightbox(igrejaFoto1)}>
+            <div className="photo-about-container">
               <img
                 src={igrejaFoto1}
-                alt="Foto da Igreja 1"
+                alt="Congregação da PIBAF"
                 className="about-photo"
               />
-              <div className="photo-overlay">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="36" height="36">
-                  <path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"/>
-                </svg>
-              </div>
             </div>
-            <div className="photo-about-container" onClick={() => openLightbox(igrejaFoto2)}>
+            <div className="photo-about-container">
               <img
                 src={igrejaFoto2}
-                alt="Foto da Igreja 2"
+                alt="Celebração dos 10 anos da PIBAF"
                 className="about-photo"
               />
-              <div className="photo-overlay">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="36" height="36">
-                  <path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"/>
-                </svg>
-              </div>
             </div>
           </div>
         </div>
@@ -121,14 +129,11 @@ const AboutSection: React.FC = () => {
       {/* Lightbox modal */}
       {lightboxOpen && currentImg && (
         <div className="lightbox-overlay" onClick={closeLightbox}>
-          <div className="lightbox-content" onClick={e => e.stopPropagation()}>
-            <button className="lightbox-close" onClick={closeLightbox}>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="36" height="36">
-                <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
-              </svg>
-            </button>
-            <img src={currentImg} alt="Imagem ampliada" className="lightbox-image" />
-          </div>
+          <button className="lightbox-close" onClick={closeLightbox} aria-label="Fechar visualização">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="36" height="36">
+              <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
+            </svg>
+          </button>
         </div>
       )}
     </section>

@@ -8,7 +8,6 @@ import PastorsSection from "./components/PastorsSection/PastorsSection";
 import Footer from "./components/Footer/Footer";
 import HelpTheWorkSection from "./components/HelpTheWorkSection/HelpTheWorkSection";
 import YouTubeSection from "./components/YouTubeSection/YouTubeSection";
-// import YouTubeSection from "./components/YouTubeSection/YouTubeSection";
 
 
 const App: React.FC = () => {
@@ -20,7 +19,7 @@ const App: React.FC = () => {
         <AboutSection />
         <WorshipTimes />
         <PastorsSection />
-        {/* <YouTubeSection /> */}
+        <YouTubeSection />
         <HelpTheWorkSection />
       </main>
       <Footer />
