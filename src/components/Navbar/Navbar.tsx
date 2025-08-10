@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import "./style.css";
-import logo from "../../assets/logopibaf.svg";
-import logo2 from "../../assets/logo PIBAF png.png"
+import logo from "../../../public/logoPibafEscrita.png"
+// import logo2 from "../../assets/logo PIBAF png.png"
 
 
 const Navbar: React.FC = () => {
@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
             }}
           >
             <img
-              src={logo2}// Substitua com o caminho da imagem
+              src={logo}// Substitua com o caminho da imagem
               alt="PIB Augusto Franco"
               className="pibaflogo"
             />

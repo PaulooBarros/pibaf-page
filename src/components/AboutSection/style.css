@@ -1,11 +1,14 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap'); */
+/* Fonte global */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
 .about-section {
   background-color: #f8f8f8;
   color: #333;
   padding: 80px 0;
+  font-family: 'Outfit', sans-serif;
 }
 
+/* Grid principal */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -13,42 +16,67 @@
   align-items: center;
 }
 
+/* Título */
 .section-title {
-  /* font-family: 'Playfair Display', serif; */
-  font-size: 2.5rem;
-  margin-bottom: 25px;
-  color: #2a2a2a;
+  font-size: clamp(2rem, 2.5vw, 2.8rem);
+  margin-bottom: 20px;
+  color: #e30613;
+  font-weight: 700;
+  text-align: center;
+  /* CENTRALIZADO */
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
+/* .section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #d4a017;
+  margin: 12px auto 25px auto;
+  border-radius: 2px;
+} */
+
+/* Texto */
 .about-text {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 1.4vw, 1.1rem);
   line-height: 1.8;
+  text-align: justify;
+  /* REMOVIDO max-width para ocupar toda a coluna */
+  margin: 0 auto;
 }
 
 .about-text p {
   margin-bottom: 20px;
 }
 
-/* Logos lado a lado */
+/* Logos */
 .about-logos {
   display: flex;
   gap: 20px;
   align-items: center;
   margin-top: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .about-logos img {
   height: 70px;
+  max-width: 100%;
   opacity: 0.95;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .about-logos img:hover {
   transform: scale(1.05);
+  opacity: 1;
 }
 
-/* Duas fotos na coluna direita */
+/* Fotos */
 .about-photos {
   display: flex;
   flex-direction: column;
@@ -58,7 +86,7 @@
 .about-photos img {
   width: 100%;
   border-radius: 14px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
 }
 
@@ -67,13 +95,119 @@
 }
 
 /* Responsividade */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
+  .about-grid {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
   .about-grid {
     grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-text {
     text-align: center;
+    /* texto centralizado no mobile */
+    padding: 0 15px;
+    max-width: 100% !important;
+    /* remove qualquer limitação de largura */
+
+  }
+
+  .about-text p {
+    text-align: justify;
   }
 
   .about-logos {
     justify-content: center;
   }
+
+  .about-photos {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .about-photos img {
+    max-width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 50px 15px;
+  }
+
+  .about-photos img {
+    max-width: 100%;
+  }
+
+  .about-logos img {
+    height: 50px;
+  }
+}
+
+.clickable-photo {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.clickable-photo:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox Overlay */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Conteúdo da imagem */
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Botão fechar */
+.lightbox-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 2.5rem;
+  color: red;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0;
+  user-select: none;
+}
+
+.lightbox-close:hover {
+
+  font-size: 2.6rem;
+
 }
