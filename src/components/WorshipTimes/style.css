@@ -1,10 +1,11 @@
+/* style.css */
 .worship-section {
-  /* background-color: var(--light-color); */
-  background: url('../../assets/wave-haikei.svg');
-  color: var(--worship-text-color);
-  padding: 80px 0;
+  background: #f8f5f2;
+  color: #333;
+  padding: 120px 20px;
   position: relative;
   overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .worship-section::before {
@@ -14,79 +15,72 @@
   left: 0;
   width: 100%;
   height: 100%;
+  background: url('https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
   background-size: cover;
-  background-repeat: no-repeat;
+  opacity: 0.08;
   z-index: 0;
 }
 
-.worship-header {
-  text-align: center;
-  margin-bottom: 50px;
-  padding: 16px;
+.worship-container {
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
   z-index: 1;
 }
 
+.worship-header {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
 .worship-title {
-  font-size: 3.5rem;
-  color: white;
-  font-weight: 700;
-  line-height: 1;
-  margin-bottom: 0;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  font-weight: 300;
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3a3a3a;
 }
 
-.worship-subtitle {
-  font-size: 2rem;
-  color: var(--secondary-color);
-  font-weight: 400;
-  margin-top: 0;
-  position: relative;
+.title-decoration {
   display: inline-block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #b58a5a, transparent);
+  margin: 0 20px;
 }
 
-.worship-subtitle::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: var(--accent-color);
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.5s ease;
-}
-
-.worship-header:hover .worship-subtitle::after {
-  transform: scaleX(1);
-  transform-origin: left;
+.welcome-message {
+  font-size: 1.2rem;
+  color: #6d6d6d;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-weight: 300;
+  letter-spacing: 0.5px;
 }
 
 .worship-schedule {
   display: flex;
   justify-content: center;
-  gap: 80px;
-  margin: 60px auto;
-  max-width: 900px;
-  position: relative;
-  z-index: 1;
+  gap: 40px;
+  margin: 0 auto 80px auto;
+  flex-wrap: wrap;
 }
 
 .worship-day {
-  text-align: center;
-  padding: 30px;
-  border-radius: 15px;
   background: white;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-  cursor: pointer;
-  flex: 1;
-  max-width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  width: 300px;
+  text-align: center;
+  transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
-  animation: fadeInUp 0.5s ease forwards;
-  opacity: 0;
+  border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 .worship-day::before {
@@ -95,191 +89,224 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 5px;
-  background: var(--accent-color);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
+  height: 4px;
+  background: linear-gradient(90deg, #b58a5a, #d4b38a);
 }
 
-.worship-day:hover::before,
-.worship-day.active::before {
-  transform: scaleX(1);
+.worship-day.featured {
+  transform: scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
-.worship-day.active {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+.worship-day.featured::before {
+  height: 6px;
 }
 
-.day-icon {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  transition: transform 0.3s ease;
-  display: none;
-}
-
-.worship-day:hover .day-icon {
-  transform: scale(1.1);
+.day-header {
+  margin-bottom: 30px;
 }
 
 .worship-day h4 {
-  font-size: 1.8rem;
-  color: var(--secondary-color);
-  margin-bottom: 20px;
-  position: relative;
-  padding-bottom: 10px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  color: #3a3a3a;
+  letter-spacing: 0.5px;
 }
 
-.worship-day h4::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 2px;
-  background: var(--accent-color);
-  transition: width 0.3s ease;
-}
-
-.worship-day:hover h4::after {
-  width: 80px;
-}
-
-.times-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.worship-time {
+.time-badge {
   display: inline-block;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.5rem;
+  padding: 8px 20px;
+  background: #f1e9e0;
+  color: #b58a5a;
+  border-radius: 50px;
   font-weight: 600;
-  color: var(--primary-color);
-  padding: 10px 20px;
-  border-radius: 12px;
-  margin: 0 10px 10px 0;
+  margin: 5px;
+  font-size: 1.1rem;
   transition: all 0.3s ease;
 }
 
+.time-badge.morning {
+  background: #f1e9e0;
+  color: #b58a5a;
+}
 
-.worship-time::before {
-  content: '';
-  display: none;
+.time-badge.evening {
+  background: #f1e9e0;
+  color: #b58a5a;
+}
+
+.divider {
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: #e0e0e0;
+  margin: 25px auto;
+}
+
+.day-description {
+  font-size: 0.95rem;
+  color: #888;
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 0.3px;
 }
 
 .worship-footer {
-  text-align: center;
-  margin-top: 60px;
-  padding-top: 20px;
-  position: relative;
-  z-index: 1;
+  display: flex;
+  justify-content: center;
 }
 
-.worship-footer p {
-  font-size: 1.2rem;
-  color: white;
-  font-style: italic;
-  position: relative;
-  display: inline-block;
-}
-
-.worship-footer p::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
+.address-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  max-width: 500px;
   width: 100%;
-  height: 1px;
-  background: var(--accent-color);
+  border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
+.address-icon {
+  width: 60px;
+  height: 60px;
+  background: #f8f5f2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 25px;
+  flex-shrink: 0;
+}
+
+.address-icon svg {
+  width: 24px;
+  height: 24px;
+  color: #b58a5a;
+}
+
+.address-details {
+  text-align: left;
+}
+
+.address-details h5 {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #888;
+  margin: 0 0 5px 0;
+  letter-spacing: 1px;
+}
+
+.address-link {
+  color: #3a3a3a;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.address-link:hover {
+  color: #b58a5a;
+}
+
+.address-zip {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin: 0;
+}
+
+/* Animations */
+.worship-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.worship-section.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.worship-day {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.worship-section.animate-in .worship-day {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.worship-section.animate-in .worship-day:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+.worship-section.animate-in .worship-day:nth-child(2) {
+  transition-delay: 0.4s;
+}
+
+.address-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.worship-section.animate-in .address-card {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .worship-section {
-    padding: 60px 0;
+    padding: 80px 20px;
   }
 
   .worship-title {
-    font-size: 2.8rem;
+    font-size: 2rem;
+    flex-direction: column;
   }
 
-  .worship-subtitle {
-    font-size: 1.8rem;
+  .title-decoration {
+    width: 100px;
+    margin: 10px 0;
+  }
+
+  .welcome-message {
+    font-size: 1rem;
   }
 
   .worship-schedule {
     flex-direction: column;
-    gap: 30px;
     align-items: center;
-    max-width: 400px;
+    gap: 30px;
+    margin-bottom: 50px;
   }
 
   .worship-day {
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
+    padding: 30px;
+  }
+
+  .address-card {
+    flex-direction: column;
+    text-align: center;
     padding: 25px;
   }
 
-  .worship-day h4 {
-    font-size: 1.6rem;
+  .address-icon {
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 
-  .worship-time {
-    font-size: 1.3rem;
+  .address-details {
+    text-align: center;
   }
-
-  .day-icon {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: 1921px) {
-  .worship-title {
-    font-size: 4rem;
-  }
-
-  .worship-subtitle {
-    font-size: 2.5rem;
-  }
-
-  .worship-day h4 {
-    font-size: 2.2rem;
-  }
-
-  .worship-time {
-    font-size: 1.8rem;
-  }
-
-  .worship-footer p {
-    font-size: 1.4rem;
-  }
-
-  .day-icon {
-    font-size: 3rem;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.worship-day:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.worship-day:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.worship-day:nth-child(3) {
-  animation-delay: 0.3s;
 }

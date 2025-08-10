@@ -4,6 +4,7 @@ export interface Pastor {
     role: string;
     image: string;
     description: string;
+    photoClass?: any;
   }
   
   export interface Ministry {

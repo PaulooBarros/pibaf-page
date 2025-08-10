@@ -1,189 +1,283 @@
+/* ESTILOS GERAIS */
 .pastors-section {
-  background-color: #f9f9f9;
-  padding: 60px 20px;
-  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(135deg, #fefefe 0%, #f8f8f8 100%);
+  color: #333;
+  padding: 120px 20px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.pastors-section.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pastors-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* CABEÇALHO */
+.section-header {
   text-align: center;
+  margin-bottom: 80px;
 }
 
 .section-label {
   display: inline-block;
   font-size: 0.8rem;
-  background: #f5e9d3;
-  color: #886d43;
-  padding: 4px 12px;
-  border-radius: 12px;
-  margin-bottom: 12px;
-  font-weight: 600;
-  letter-spacing: 0.6px;
+  color: #b58a5a;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  letter-spacing: 1.2px;
+  background: rgba(181, 138, 90, 0.1);
 }
 
+.section-title {
+  font-weight: 300;
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3a3a3a;
+}
 
-.section-title::after {
-  display: block;
+.title-decoration {
+  display: inline-block;
   width: 60px;
-  height: 4px;
-  background-color: #f5e9d3;
-  margin: 12px auto 28px auto;
-  border-radius: 2px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #b58a5a, transparent);
+  margin: 0 20px;
 }
 
 .section-subtitle {
-  max-width: 600px;
-  margin: 0 auto 48px auto;
-  color: #555;
   font-size: 1.1rem;
-  font-weight: 400;
-  line-height: 1.6;
-  font-style: italic;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-weight: 300;
+  letter-spacing: 0.3px;
 }
 
+/* CARDS DOS PASTORES */
 .pastors-grid {
   display: flex;
-  gap: 36px;
   justify-content: center;
+  gap: 40px;
   flex-wrap: wrap;
 }
 
 .pastor-card {
-  background: #fff;
-  border-radius: 24px;
-  padding: 40px 32px 48px 32px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  max-width: 360px;
-  flex: 1 1 360px;
-  text-align: center;
-  cursor: pointer;
-  transition: box-shadow 0.35s ease, transform 0.35s ease;
-  user-select: none;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+  border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
-.pastor-card:hover,
-.pastor-card:focus {
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-  transform: translateY(-6px);
-  outline: none;
+.pastors-section.animate-in .pastor-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FOTOS DOS PASTORES */
+.photo-container {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
 }
 
 .pastor-photo {
-  width: 170px;
-  height: 170px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #f5e9d3;
-  margin-bottom: 20px;
-  transition: transform 0.4s ease;
+  object-position: center 30%;
+  display: block;
+  transition: transform 0.5s ease;
 }
 
-.pastor-card:hover .pastor-photo,
-.pastor-card:focus .pastor-photo {
-  transform: scale(1.1);
+/* AJUSTE ESPECÍFICO PARA O PR. NILTON */
+.pr-nilton-photo {
+  object-position: center 20% !important;
+  /* Se precisar de mais ajuste, pode usar: */
+  /* transform: scale(0.95); */
+}
+
+.photo-container:hover .pastor-photo {
+  transform: scale(1.05);
+}
+
+.photo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.photo-container:hover .photo-overlay {
+  opacity: 1;
+}
+
+/* INFORMAÇÕES DO PASTOR */
+.pastor-info {
+  padding: 30px;
+  text-align: center;
 }
 
 .pastor-name {
-  font-weight: 700;
-  font-size: 1.4rem;
-  margin: 10px 0 8px 0;
-  color: #222;
+  font-weight: 400;
+  font-size: 1.6rem;
+  margin: 0 0 10px 0;
+  color: #3a3a3a;
+  letter-spacing: 0.5px;
 }
 
 .pastor-role {
-  color: #d61616;
+  color: #b58a5a;
   font-weight: 500;
-  font-size: 0.6rem;
-  margin-bottom: 20px;
-  font-style: normal;
-  letter-spacing: 0.8px;
+  font-size: 0.9rem;
+  margin: 0 0 20px 0;
+  letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+.divider {
+  width: 60px;
+  height: 1px;
+  background: #e0e0e0;
+  margin: 0 auto 20px auto;
 }
 
 .pastor-description {
   font-size: 1rem;
   color: #666;
-  line-height: 1.5;
-  font-weight: 400;
-  min-height: 90px;
+  line-height: 1.8;
+  font-weight: 300;
+  letter-spacing: 0.3px;
 }
 
-/* Lightbox básico */
-.lightbox {
+/* LIGHTBOX */
+.lightbox-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.75);
+  background: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
-  cursor: zoom-out;
+  z-index: 9999;
 }
 
-.lightbox-img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
 }
 
 .lightbox-close {
-  position: fixed;
-  top: 24px;
-  right: 32px;
-  font-size: 3rem;
+  position: absolute;
+  top: 20px;
+  right: 20px;
   background: transparent;
   border: none;
-  color: #fff;
   cursor: pointer;
-  font-weight: 900;
-  user-select: none;
-  transition: color 0.3s ease;
+  padding: 10px;
+  z-index: 10000;
+  transition: transform 0.3s ease;
 }
 
 .lightbox-close:hover {
-  color: #f5e9d3;
+  transform: scale(1.1);
 }
 
-/* Responsividade */
-@media (max-width: 900px) {
-  .pastors-grid {
-    gap: 28px;
-  }
-
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
   .pastor-card {
-    max-width: 100%;
-    flex: 1 1 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pastors-section {
+    padding: 80px 20px;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+    flex-direction: column;
+  }
+  
+  .title-decoration {
+    width: 100px;
+    margin: 10px 0;
+  }
+  
+  .photo-container {
+    height: 300px;
   }
 }
 
 @media (max-width: 480px) {
+  .pastors-section {
+    padding: 60px 15px;
+  }
+  
   .section-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
-
-  .section-subtitle {
-    font-size: 1rem;
-  }
-
-  .pastor-photo {
-    width: 110px;
-    height: 110px;
-    margin-bottom: 16px;
-  }
-
+  
   .pastor-name {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
-
+  
   .pastor-role {
-    font-size: 1rem;
-    margin-bottom: 16px;
+    font-size: 0.8rem;
   }
-
-  .pastor-description {
-    font-size: 0.9rem;
-    min-height: auto;
+  
+  .pastor-info {
+    padding: 25px 20px;
+  }
+  
+  .photo-container {
+    height: 250px;
   }
 }
