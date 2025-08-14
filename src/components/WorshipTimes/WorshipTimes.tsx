@@ -47,7 +47,7 @@ const WorshipSection = () => {
             </div>
             <div className="day-footer">
               <span className="divider"></span>
-              <p className="day-description">Momento de oração e estudo bíblico</p>
+              <p className="day-description">Culto de Oração e Estudo Bíblico</p>
             </div>
           </div>
 

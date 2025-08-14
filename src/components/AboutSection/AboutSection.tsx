@@ -71,7 +71,7 @@ const AboutSection: React.FC = () => {
             </h2>
             <div className="about-content">
               <p className="about-paragraph">
-                Há 12 anos, a <strong>Primeira Igreja Batista em Augusto Franco</strong>{" "}
+                A <strong>Primeira Igreja Batista em Augusto Franco</strong>{" "}
                 tem sido um lugar de adoração, comunhão e transformação de vidas. Nossa
                 missão é proclamar o Evangelho de Jesus Cristo com fidelidade bíblica,
                 formando discípulos que amam a Deus e servem ao próximo.

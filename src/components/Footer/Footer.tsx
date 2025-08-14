@@ -33,8 +33,7 @@ const Footer: React.FC = () => {
           <div className="footer-column">
             <h4 className="footer-title">Contato</h4>
             <ul className="footer-list">
-              <li>contato@pibaugustofranco.com</li>
-              <li>(79) 9999-9999</li>
+              <li>(79) 98804-7918</li>
             </ul>
           </div>
 
@@ -46,6 +45,9 @@ const Footer: React.FC = () => {
               </a>
               <a href="https://www.youtube.com/@PIBAF" target="_blank" rel="noopener noreferrer" className="social-icon">
                 <i className="fab fa-youtube"></i>
+              </a>
+              <a href="https://www.facebook.com/aracajupibaf/" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <i className="fab fa-facebook"></i>
               </a>
 
             </div>

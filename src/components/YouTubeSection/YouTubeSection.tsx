@@ -10,7 +10,7 @@ const YouTubeSection: React.FC = () => {
         <div className="section-header">
           <h2 className="section-title">
             <span className="title-decoration"></span>
-            Nosso Conteúdos
+            Nossos Conteúdos
             <span className="title-decoration"></span>
           </h2>
           <p className="section-subtitle">

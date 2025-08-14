@@ -1,4 +1,4 @@
-import React, {useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Pastor } from "../../types/types";
 import "./style.css";
 import pastorNilton from "../../assets/PrNilton1redimensionada.jpeg";
@@ -13,15 +13,25 @@ const PastorsSection: React.FC = () => {
       role: "Pastor Presidente",
       image: pastorNilton,
       photoClass: "pr-nilton-photo", // Classe especial para o Pr. Nilton
-      description:
-        "Com mais de 25 anos de ministério, o Pr. Nilton é um líder apaixonado pela palavra de Deus, dedicado à formação espiritual da igreja e à liderança visionária para crescimento e transformação de vidas.",
+      description: `
+    O Pr. Nilton é um líder comprometido com a Palavra de Deus, dedicado à formação espiritual da igreja
+    e à liderança visionária para o crescimento e a transformação de vidas. Atuou na denominação como
+    presidente da Juventude Batista de Sergipe (JUBASE) e foi 1º Vice-Presidente da Convenção Batista
+    de Sergipe (CBS). Serviu por vários anos como relator da Comissão de Filiação e Acompanhamento da
+    Ordem dos Pastores Batistas do Brasil, seção sergipana, além de atuar como Assessor Auxiliar da
+    Aliança Bíblica Universitária (ABU). É formado em Economia, possui mestrado e doutorado pela
+    Universidade Federal de Sergipe (UFS) e atua como professor de Economia no Instituto Federal de
+    Sergipe (IFS), campus Aracaju.
+  `
     },
+
+
     {
       name: "Zilton Santos",
       role: "Pastor Auxiliar",
       image: pastorZilton,
       description:
-        "O Pr. Zilton tem um coração para o discipulado e acompanhamento pastoral, com foco em ajudar cada membro a crescer na fé e a desenvolver um relacionamento profundo com Cristo.",
+        "Zilton José dos Santos, nascido em outubro de 1958, casado, cursado em Bacharel em Teologia pela Faculdade Batista Equatorial, criou e organizou a Primeira Igreja Batista em Murinin, município de Benevides, Pará. Foi missionário da Aliança Pro Evangelização das Crianças e Diretor Estadual no Pará e na Bahia, por 19 anos. Atualmente é Presidente do Projeto Esperança em Aracaju e com pastor da Primeira Igreja Batista em Augusto Franco, Aracaju e missionário da missão The Mail Box Club em Sergipe.",
     },
   ];
 
@@ -66,19 +76,19 @@ const PastorsSection: React.FC = () => {
 
         <div className="pastors-grid">
           {pastors.map((pastor, index) => (
-            <div 
+            <div
               key={pastor.name}
               className="pastor-card"
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
-              <div 
+              <div
                 className="photo-container"
                 role="button"
                 tabIndex={0}
               >
-                <img 
-                  src={pastor.image} 
-                  alt={pastor.name} 
+                <img
+                  src={pastor.image}
+                  alt={pastor.name}
                   className={`pastor-photo ${pastor.photoClass || ""}`}
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = '/default-pastor.jpg';
