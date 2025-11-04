@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Pastor } from "../../types/types";
 import "./style.css";
-import pastorNilton from "../../assets/PrNilton1redimensionada.jpeg";
+import pastorNilton from "../../assets/prNilton.jpg";
 import pastorZilton from "../../assets/PrZilton.jpeg";
 
 const PastorsSection: React.FC = () => {
@@ -31,7 +31,7 @@ const PastorsSection: React.FC = () => {
       role: "Pastor Auxiliar",
       image: pastorZilton,
       description:
-        "Zilton José dos Santos, nascido em outubro de 1958, casado, cursado em Bacharel em Teologia pela Faculdade Batista Equatorial, criou e organizou a Primeira Igreja Batista em Murinin, município de Benevides, Pará. Foi missionário da Aliança Pro Evangelização das Crianças e Diretor Estadual no Pará e na Bahia, por 19 anos. Atualmente é Presidente do Projeto Esperança em Aracaju e com pastor da Primeira Igreja Batista em Augusto Franco, Aracaju e missionário da missão The Mail Box Club em Sergipe.",
+        "Zilton José dos Santos, nascido em outubro de 1958, é casado e Bacharel em Teologia pela Faculdade Batista Equatorial. Foi fundador e organizador da Primeira Igreja Batista em Murinin, município de Benevides, Pará. Atuou como missionário da Aliança Pró-Evangelização das Crianças, exercendo também a função de Diretor Estadual no Pará e na Bahia, ao longo de 19 anos de ministério. Atualmente, é Presidente do Projeto Esperança, em Aracaju, pastor na Primeira Igreja Batista em Augusto Franco (Aracaju-SE) e missionário da missão The Mail Box Club em Sergipe.",
     },
   ];
 

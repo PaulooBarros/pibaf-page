@@ -117,9 +117,8 @@
 
 /* AJUSTE ESPECÍFICO PARA O PR. NILTON */
 .pr-nilton-photo {
-  object-position: center 61% !important;
-  /* Se precisar de mais ajuste, pode usar: */
-  /* transform: scale(0.95); */
+  object-position: center 21% !important;
+  /* transform: scale(0.94); */
 }
 
 .photo-container:hover .pastor-photo {

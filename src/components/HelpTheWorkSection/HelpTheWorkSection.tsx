@@ -34,7 +34,7 @@ const HelpTheWorkSection = () => {
         <div className="help-header">
           <h2 className="section-title">
             <span className="title-decoration"></span>
-            Ajude esta Obra
+            Invista nesta Obra
             <span className="title-decoration"></span>
           </h2>
         </div>
